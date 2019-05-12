@@ -52,16 +52,28 @@ public class Main {
            // }
         //}
         //pr.print(ans);
-        int a=sc.nextInt();
-        int b=sc.nextInt();
-        int c=Math.min(a,b);
-        int d=Math.max(a,b);
-        int[]in={d,c};
-        while (in[1]!=0){
-            int buf=in[1];
-            in[1]=in[0]%in[1];
-            in[0]=buf;
+//        int a=sc.nextInt();
+//        int b=sc.nextInt();
+//        int c=Math.min(a,b);
+//        int d=Math.max(a,b);
+//        int[]in={d,c};
+//        while (in[1]!=0){
+//            int buf=in[1];
+//            in[1]=in[0]%in[1];
+//            in[0]=buf;
+//        }
+//        pr.print(in[0]);
+        int n=sc.nextInt();
+        int nOld=-1;
+        int old=0;
+        for (int i = 1; i <=n ; i++) {
+            int a=sc.nextInt();
+            int b=sc.nextInt();
+            if(a>old&&b==1){
+                old=a;
+                nOld=i;
+            }
         }
-        pr.print(in[0]);
+        pr.print(nOld);
     }
 }
