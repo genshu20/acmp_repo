@@ -75,13 +75,28 @@ public class Main {
 //            }
 //        }
 //        pr.print(nOld);
-        double x1=sc.nextLong();
-        double y1=sc.nextLong();
-        double x2=sc.nextLong();
-        double y2=sc.nextLong();
-        double x3=sc.nextLong();
-        double y3=sc.nextLong();
-        double s=Math.abs((x1-x3)*(y2-y3)-(x2-x3)*(y1-y3))/2;
-        pr.print(s);
+//        double x1=sc.nextLong();
+//        double y1=sc.nextLong();
+//        double x2=sc.nextLong();
+//        double y2=sc.nextLong();
+//        double x3=sc.nextLong();
+//        double y3=sc.nextLong();
+//        double s=Math.abs((x1-x3)*(y2-y3)-(x2-x3)*(y1-y3))/2;
+//        pr.print(s);
+        int n=sc.nextInt();
+        int[]ar=new int[n];
+        for (int i = 0; i <n; i++) {
+            ar[i]=sc.nextInt();
+        }
+        int nSub=sc.nextInt();
+        for (int i = 0; i <nSub ; i++) {
+            int a=sc.nextInt();
+            int b=sc.nextInt();
+            int[]tmp=Arrays.copyOfRange(ar,a-1,b);
+            for (int j:tmp) {
+                pr.print(j+" ");
+            }
+            pr.println();
+        }
     }
 }
