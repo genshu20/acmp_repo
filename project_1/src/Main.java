@@ -63,17 +63,25 @@ public class Main {
 //            in[0]=buf;
 //        }
 //        pr.print(in[0]);
-        int n=sc.nextInt();
-        int nOld=-1;
-        int old=0;
-        for (int i = 1; i <=n ; i++) {
-            int a=sc.nextInt();
-            int b=sc.nextInt();
-            if(a>old&&b==1){
-                old=a;
-                nOld=i;
-            }
-        }
-        pr.print(nOld);
+//        int n=sc.nextInt();
+//        int nOld=-1;
+//        int old=0;
+//        for (int i = 1; i <=n ; i++) {
+//            int a=sc.nextInt();
+//            int b=sc.nextInt();
+//            if(a>old&&b==1){
+//                old=a;
+//                nOld=i;
+//            }
+//        }
+//        pr.print(nOld);
+        double x1=sc.nextLong();
+        double y1=sc.nextLong();
+        double x2=sc.nextLong();
+        double y2=sc.nextLong();
+        double x3=sc.nextLong();
+        double y3=sc.nextLong();
+        double s=Math.abs((x1-x3)*(y2-y3)-(x2-x3)*(y1-y3))/2;
+        pr.print(s);
     }
 }
