@@ -99,11 +99,23 @@ public class Main {
 //            pr.println();
 //        }
         int n=sc.nextInt();
-        int m=sc.nextInt();
-        int k=sc.nextInt();
-        int x;
-        if(k<=m) x=(m/k+k-1)*n;
-        else x=m*n;
-        pr.print(x);
+        int[]days=new int[n];
+        ArrayList<Integer>evenList=new ArrayList<>();
+        ArrayList<Integer>unEvenList=new ArrayList<>();
+        for (int i = 0; i <n ; i++) {
+            days[i]=sc.nextInt();
+            if (days[i]%2==0)evenList.add(days[i]);
+            else unEvenList.add(days[i]);
+        }
+        for(Integer i:unEvenList){
+            pr.print(i+" ");
+        }
+        pr.println();
+        for(Integer i:evenList){
+            pr.print(i+" ");
+        }
+        pr.println();
+        if(evenList.size()>=unEvenList.size())pr.print("YES");
+        else pr.print("NO");
     }
 }
